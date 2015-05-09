@@ -25,7 +25,7 @@ create_plot3 <- function( fname="household_power_consumption.txt",
     plot( target_data$Timestamp,
           target_data$Sub_metering_1,
           type="l",
-          ylab = "Energy sub-metering (Wh)",
+          ylab = "Energy sub metering",
           xlab="" );
 
     # overlay additional sub-metering values on existing plot
@@ -37,7 +37,7 @@ create_plot3 <- function( fname="household_power_consumption.txt",
             ncol=1,
             lwd=1,
             col=c("black","red", "blue"), 
-            legend=c("Kitchen", "Laundry", "Water Heater & A/C"));
+            legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"));
     
     # close the device
     close_dev();

@@ -21,7 +21,7 @@ create_plot1 <- function( fname="household_power_consumption.txt",
     # plot the histogram
     hist( target_data$Global_active_power,
           main = "Global Active Power",
-          xlab = "Global Active Power (kW)",
+          xlab = "Global Active Power (kilowatts)",
           col="red" );
  
     # close the device

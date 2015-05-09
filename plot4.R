@@ -29,14 +29,14 @@ create_plot4 <- function(fname="household_power_consumption.txt",
     plot( target_data$Timestamp,
           target_data$Global_active_power,
           xlab = "",
-          ylab = "Global Active Power (kW)",
+          ylab = "Global Active Power",
           col  = "black",
           type = "l" );
 
     # line plot of voltage
     plot( target_data$Timestamp,
           target_data$Voltage,
-          xlab = "",
+          xlab = "datetime",
           ylab = "Voltage",
           col  = "black",
           type = "l" );
@@ -46,7 +46,7 @@ create_plot4 <- function(fname="household_power_consumption.txt",
     plot( target_data$Timestamp,
           target_data$Sub_metering_1, 
           type="l",
-          ylab = "Energy sub-metering (Wh)",
+          ylab = "Energy sub metering",
           xlab="" );
     
     # overlay additional sub-metering values on existing plot
@@ -59,17 +59,18 @@ create_plot4 <- function(fname="household_power_consumption.txt",
     
     # stick a legend on the plot
     legend( "topright",
-            lwd=1,
+            lwd=1, 
+            bty = "n",
             col=c("black","red", "blue"), 
-            legend=c("Kitchen", "Laundry", "Water Heater & A/C"),
+            legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
             cex = 0.75,
             ncol=1 );
     
     # line plot of global reactive power
     plot( target_data$Timestamp,
           target_data$Global_reactive_power,
-          xlab = "",
-          ylab = "Global Reactive Power (kW)",
+          xlab = "datetime",
+          ylab = "Global_reactive_power",
           type = "l",
           col  = "black" );
     

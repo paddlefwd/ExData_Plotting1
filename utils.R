@@ -13,6 +13,7 @@ library("data.table",quietly=TRUE);
 get_data <- function( fname, cdates )
 {
     # read the dataset and slice out the days of interest
+    # don't convert the date/time types here, just treat as character data
     full_set <- as.data.table(read.table( fname,
                                           header=TRUE, 
                                           sep=";",

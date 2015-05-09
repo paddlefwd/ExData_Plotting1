@@ -22,7 +22,7 @@ create_plot2 <- function( fname="household_power_consumption.txt",
     plot( target_data$Timestamp,
           target_data$Global_active_power,
           type="l",
-          ylab = "Global Active Power (kW)",
+          ylab = "Global Active Power (kilowatts)",
           xlab="")
 
     # close the device
